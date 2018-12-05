@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>手机demo</title>
+    <link rel="stylesheet" href="demo.css">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
 </head>
+
 <body>
-    
+    <div class="tip">
+        Mobile Demo , try to find hiro Marks.
+    </div>
+    <a-scene embedded arjs='sourceType: webcam;'>
+        <a-assets>
+            <a-asset-item id="desk-obj" src="IKEA-Anssi_bar_stool-3D.obj"></a-asset-item>
+            <a-asset-item id="desk-mtl" src="IKEA-Anssi_bar_stool-3D.mtl"></a-asset-item>
+        </a-assets>
+        
+        <a-entity obj-model="obj: #desk-obj; mtl: #desk-mtl" rotation="0 0 0" position="0 0.5 0" scale="0.5 0.5 0.5"></a-entity>
+        <a-marker-camera preset='hiro'>
+                
+        </a-marker-camera>
+    </a-scene>
+
 </body>
+
 </html>
