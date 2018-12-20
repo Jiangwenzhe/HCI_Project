@@ -52,11 +52,13 @@
 
       <section class="jumbotron text-center" style="background:url('source/b1.jpg'); color: white">
         <div class="container">
-          <h1 class="jumbotron-heading">Foun.. Librarys</h1>
-          <p class="lead text-muted">选取需要投射的3d模型，找到相关的标记物，开始投射</p>
+          <div id="title">
+            <h1 class="jumbotron-heading">Foun.. Librarys</h1>
+            <p class="lead text-muted">选取需要投射的3d模型，找到相关的标记物，开始投射</p>
+          </div>
           <p>
-            <a href="marker.html" class="btn btn-primary my-2">标记物下载</a>
-            <a href="#" class="btn btn-secondary my-2">先放着</a>
+            <a href="marker.html" class="btn btn-warning my-2">标记物</a>
+            <a href="#" class="btn btn-secondary my-2">说明书</a>
           </p>
         </div>
       </section>
@@ -72,7 +74,7 @@
                   <p class="card-text">这是一个柜子</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary jump-button" id="IKEA-Alex_drawer_white-3D">查看</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary jump-button" data-toggle="modal" data-target="#ConfigModel" id="IKEA-Alex_drawer_white-3D">查看</button>
                     </div>
                     <small class="text-muted">800kb</small>
                   </div>
@@ -207,8 +209,35 @@
 
 
 
-    </main>
 
+
+    </main>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ConfigModel">Open modal for @mdo</button>
+    <!-- Modal -->
+    <div class="modal fade" id="ConfigModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">输入模型参数</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">缩放比例</label>
+                <input type="text" class="form-control" id="zoomSize" value='0.02' this.$attrs placeholder="桌面查看最好0.01~0.05 / 原大小为1">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-primary" id='submitModel' >确定</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
