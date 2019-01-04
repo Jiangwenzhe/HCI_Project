@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.card').mouseover(function() {
+  $('.showcase').mouseover(function() {
       $(this).addClass('animated pulse fast');
   }).mouseleave(function() {
     $(this).removeClass('animated pulse fast');
@@ -11,6 +11,10 @@ $(document).ready(function(){
   $(this).removeClass('animated jello ');
 })
 });
+
+$('#assemble').click(function() {
+  window.location.href='assemble.html';
+})
 
 $('.jump-button').click(function() {
   var modelID = $(this).attr('id');

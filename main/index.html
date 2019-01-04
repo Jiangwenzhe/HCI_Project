@@ -1,255 +1,285 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>3D Model in AR</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <!--  CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link href="css/index.css" rel="stylesheet">
-  </head>
+  <title>3D Model in AR</title>
 
-  <body>
+  <!--  CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link href="css/index.css" rel="stylesheet">
+</head>
 
-    <header>
-      <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">简介</h4>
-              <p class="text-muted text">一个很小的关于WebAR的小应用，由<code>&lt;AR.js&gt;</code>和<code>&lt;Aframe&gt;</code>提供支持。
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">关于</h4>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-white">查看在Girhub上的项目</a></li>
-                <li><a href="#" class="text-white">AR.js</a></li>
-                <li><a href="#" class="text-white">Aframe</a></li>
-              </ul>
-            </div>
+<body>
+
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">简介</h4>
+            <p class="text-muted text">一个很小的关于WebAR的小应用，由<code>&lt;AR.js&gt;</code>和<code>&lt;Aframe&gt;</code>提供支持。
           </div>
-        </div>
-      </div>
-      <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <!-- <svg data-src="source/icon.svg"  width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg> -->
-            <strong>WEB-AR</strong>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <main role="main">
-
-      <section class="jumbotron text-center" style="background:url('source/b1.jpg'); color: white">
-        <div class="container">
-          <div id="title">
-            <h1 class="jumbotron-heading">Foun.. Librarys</h1>
-            <p class="lead text-muted">选取需要投射的3d模型，找到相关的标记物，开始投射</p>
-          </div>
-          <p>
-            <a href="marker.html" class="btn btn-warning my-2">标记物</a>
-            <a href="#" class="btn btn-secondary my-2">说明书</a>
-          </p>
-        </div>
-      </section>
-
-      <div class="album py-5 bg-light">
-        <div class="container">
-
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="source/IKEA-Alex_drawer_white-3D/1.png"   alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">IKEA Alex drawer white 3D</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary jump-button" data-toggle="modal" data-target="#ConfigModel" id="IKEA-Alex_drawer_white-3D">查看</button>
-                    </div>
-                    <small class="text-muted">柜子</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="source/IKEA-Forsby_Small_Stool-3D/1.png"   alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">IKEA Forsby Small Stool 3D</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary jump-button" data-toggle="modal" data-target="#ConfigModel" id="IKEA-Forsby_Small_Stool-3D">查看</button>
-                    </div>
-                    <small class="text-muted">凳子</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="source/IKEA-KLUBBO_coffee_table-3D/1.png"   alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">IKEA KLUBBO coffee table 3D</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary jump-button" data-toggle="modal" data-target="#ConfigModel" id="IKEA-KLUBBO_coffee_table-3D">查看</button>
-                    </div>
-                    <small class="text-muted">桌子</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="source/IKEA-Emmabo_Rocking_Chair-3D/1.png"   alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">IKEA Emmabo Rocking Chair 3D</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary jump-button" data-toggle="modal" data-target="#ConfigModel" id="IKEA-Emmabo_Rocking_Chair-3D">查看</button>
-                    </div>
-                    <small class="text-muted">椅子</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="source/IKEA-Emmabo_Rocking_Chair-3D/1.png"   alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">IKEA Emmabo Rocking Chair 3D</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary jump-button" data-toggle="modal" data-target="#ConfigModel" id="IKEA-Emmabo_Rocking_Chair-3D">查看</button>
-                    </div>
-                    <small class="text-muted">椅子</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-    </main>
-    
-    <!-- Modal -->
-    <div class="modal fade" id="ConfigModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">输入模型参数</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="recipient-name" class="col-form-label">缩放比例</label>
-                <input type="text" class="form-control" id="zoomSize" value='0.02' this.$attrs placeholder="桌面查看最好0.01~0.05 / 原大小为1">
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
-            <button type="button" class="btn btn-primary" id='submitModel' >确定</button>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">关于</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">查看在Girhub上的项目</a></li>
+              <li><a href="#" class="text-white">AR.js</a></li>
+              <li><a href="#" class="text-white">Aframe</a></li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>一个基于。。。。。。。。</p>
-        <p>Erzhuyijian</p>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <!-- <svg data-src="source/icon.svg"  width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg> -->
+          <strong>WEB-AR 👍</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-    </footer>
+    </div>
+  </header>
 
-    <!-- Bootstrap core JavaScript
+  <main role="main">
+
+    <section class="jumbotron text-center" style="background:url('source/b2.jpg'); background-size:cover; color: white">
+      <div class="container">
+        <div id="title" >
+          <h1 class="jumbotron-heading">Furniture Librarys</h1>
+          <p class="lead text-muted">选取需要投射的3d模型，找到相关的标记物，开始投射</p>
+        </div>
+        <p>
+          <a href="marker.html" class="btn btn-warning my-2">标记物</a>
+          <a href="#" class="btn btn-secondary my-2" data-toggle="modal"
+          data-target="#ins">使用说明</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm showcase">
+              <img class="card-img-top" src="source/IKEA-Alex_drawer_white-3D/1.png" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">IKEA Alex drawer white 3D</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary jump-button" data-toggle="modal"
+                      data-target="#ConfigModel" id="IKEA-Alex_drawer_white-3D">查看</button>
+                      <button type="button" class="btn btn-sm btn-outline-success jump-button" id="assemble">组装过程</button>
+                  </div>
+                  <span class="badge badge-pill badge-secondary">柜子</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm showcase">
+              <img class="card-img-top" src="source/IKEA-Forsby_Small_Stool-3D/1.png" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">IKEA Forsby Small Stool 3D</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary jump-button" data-toggle="modal"
+                      data-target="#ConfigModel" id="IKEA-Forsby_Small_Stool-3D">查看</button>
+                      <button type="button" class="btn btn-sm btn-outline-success jump-button" id="assemble">组装过程</button>
+                  </div>
+                  <span class="badge badge-pill badge-success">凳子</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm showcase">
+              <img class="card-img-top" src="source/IKE170029/1.png" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">IKEA KALLAX Etagere Shiny gray Turquoise Small 3D</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary jump-button" data-toggle="modal"
+                      data-target="#ConfigModel" id="IKE170029">查看</button>
+                      <button type="button" class="btn btn-sm btn-outline-success jump-button" id="assemble">组装过程</button>
+                  </div>
+                  <span class="badge badge-pill badge-secondary">柜子</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm showcase">
+              <img class="card-img-top" src="source/IKEA-KLUBBO_coffee_table-3D/1.png" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">IKEA KLUBBO coffee table 3D</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary jump-button" data-toggle="modal"
+                      data-target="#ConfigModel" id="IKEA-KLUBBO_coffee_table-3D">查看</button>
+                      <button type="button" class="btn btn-sm btn-outline-success jump-button" id="assemble">组装过程</button>
+                  </div>
+                  <span class="badge badge-pill badge-info">桌子</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm showcase">
+              <img class="card-img-top" src="source/IKEA-Emmabo_Rocking_Chair-3D/1.png" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">IKEA Emmabo Rocking Chair 3D</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary jump-button" data-toggle="modal"
+                      data-target="#ConfigModel" id="IKEA-Emmabo_Rocking_Chair-3D">查看</button>
+                      <button type="button" class="btn btn-sm btn-outline-success jump-button" id="assemble">组装过程</button>
+                  </div>
+                  <span class="badge badge-pill badge-danger">椅子</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="ConfigModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">输入模型参数</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">缩放比例<text></text></label>
+              <input type="text" class="form-control" id="zoomSize" value='0.02'>
+              <small class="form-text text-muted">
+                桌面查看最好0.01~0.05 / 原大小为1
+              </small>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+          <button type="button" class="btn btn-primary" id='submitModel'>确定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 说明书 -->
+  <div class="modal fade" id="ins" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">使用说明</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    第一步 
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  <div class="container">
+                    点击&nbsp;<a href="marker.html" class="badge badge-warning">标记物</a>&nbsp;,来选取您的标记物。
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    第二步
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                  <div class="container">
+                    选取您喜欢的家具模型，点击&nbsp;<span class="badge badge-light">查看</span>&nbsp;按钮，选择您需要的缩放比例，再点击&nbsp;<span class="badge badge-primary">确定</span>&nbsp;按钮。进入模型显示网页。
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                   第三步
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  如果您还希望显示家具的组装步骤，在每个模型的底下点击&nbsp;<span class="badge badge-success">组装过程</span>&nbsp;按钮，进入组装界面。
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-dismiss="modal">知道了</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Back to top</a>
+      </p>
+      <p>一个基于<code>ar.js</code>的人机交互项目</p>
+      <p>作者：姜文哲 😎
+
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>
-  </body>
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery3.3.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
 </html>

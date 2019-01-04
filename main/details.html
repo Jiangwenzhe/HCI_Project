@@ -11,24 +11,24 @@
 </head>
 <body>
     <div class="tip">
-        this is a testing page
+        <h1 style="color: aliceblue">找到标记物。</h1>
     </div>
-    <a-scene embedded arjs='sourceType: webcam; debugUIEnabled:false;'>
+    <a-scene embedded arjs='sourceType: webcam; debugUIEnabled:false;' >
         <a-assets>
             <a-asset-item id="model-obj" src=""></a-asset-item>
             <a-asset-item id="model-mtl" src=""></a-asset-item>
         </a-assets>
         <a-marker type='pattern' Url='source/marker/marker1.patt'>
          
-            <a-obj-model src="#model-obj" mtl="#model-mtl" rotation="0 0 0" position="0 0 0" scale="">
+            <a-obj-model src="#model-obj" mtl="#model-mtl" rotation="0 0 0" position="0 0 0"  scale="" >
 
             </a-obj-model>
         </a-marker>
         
-        <a-entity camera></a-entity>
+        <a-entity camera ></a-entity>
     </a-scene>
 
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="js/jquery3.3.1.js"></script>
 <script src="js/details.js"></script>
 </html>
