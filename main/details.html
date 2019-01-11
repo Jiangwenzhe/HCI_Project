@@ -20,12 +20,19 @@
         </a-assets>
         <a-marker type='pattern' Url='source/marker/marker1.patt'>
          
-            <a-obj-model src="#model-obj" mtl="#model-mtl" rotation="0 0 0" position="0 0 0"  scale="" >
+            <a-obj-model src="#model-obj" mtl="#model-mtl" rotation="0 0 0" position="0 0 0"  scale="" shadow="cast:true; receive:true; ">
 
             </a-obj-model>
+            
+            
+        
+        
+            <a-circle radius="2"  position="0 0 0" material="color: white; opacity:0.5;" rotation="-90 0 0" shadow="receive: true"></a-circle>
         </a-marker>
         
         <a-entity camera ></a-entity>
+        
+        
     </a-scene>
 
 </body>

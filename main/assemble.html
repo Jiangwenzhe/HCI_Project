@@ -8,7 +8,7 @@
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-ar.js"></script>
     <!-- <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery3.3.1.js"></script>
     <script>
         AFRAME.registerComponent('vidhandler', {
             init: function() {
@@ -45,7 +45,7 @@
 <body style="margin : 0px; overflow: hidden; ">
     <a-scene embedded arjs='debugUIEnabled:false;' artoolkit='sourceType: webcam; detectionMode: mono; maxDetectionRate: 60; debugUIEnabled:false;'>
         <a-assets>
-            <video preload="auto" id="vid" poster="ANY IMAGE PATH (THUMBNAIL)"  response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
+            <video preload="auto" id="vid"  response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
                 <source  src="source/1.mp4">
                 <!-- <img src="ANY IMAGE PATH (THUMBNAIL)"> Your browser does not support Or Else Please Click Reset Button. -->
             </video>
