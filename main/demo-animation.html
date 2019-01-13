@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/details.css" ref="stylesheet">
+    <script src="js/aframe.min.js"></script>
+    <script src="js/aframe-ar.js"> </script>
+    <title>3d-Model</title>
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+
+	<!-- Define your 3d scene and enabled ar.js -->
+	<a-scene embedded arjs='trackingMethod: best;'>
+
+		<!-- Create a anchor to attach your augmented reality -->
+		<a-anchor hit-testing-enabled='true'>
+
+			<!-- Add your augmented reality here -->
+			<a-box color="#EED8AE" depth="1" height="5" width="1" scale="0.1 0.1 0.1">
+                <a-animation attribute="position"
+                    dur="10000"
+                    from="0 0 0"
+                    to="0.45 1.8 0.45"
+                    repeat="0"
+                    easing="linear"
+                ></a-animation>
+            </a-box>
+            <a-box color="#EED8AE" depth="1" height="5" width="1" scale="0.1 0.1 0.1">
+                <a-animation attribute="position"
+                    dur="10000"
+                    from="0 0 0"
+                    to="-0.45 1.8 0.45"
+                    repeat="0"
+                    easing="linear"
+                ></a-animation>
+            </a-box>
+            <a-box color="#EED8AE" depth="1" height="5" width="1" scale="0.1 0.1 0.1">
+                <a-animation attribute="position"
+                    dur="10000"
+                    from="0 0 0"
+                    to="-0.45 1.8 -0.45"
+                    repeat="0"
+                    easing="linear"
+                ></a-animation>
+            </a-box>
+            <a-box color="#EED8AE" depth="1" height="5" width="1" scale="0.1 0.1 0.1">
+                <a-animation attribute="position"
+                    dur="10000"
+                    from="0 0 0"
+                    to="0.45 1.8 -0.45"
+                    repeat="0"
+                    easing="linear"
+                ></a-animation>
+            </a-box>
+            <a-box color="#EED8AE" depth="10" height="1" width="10" scale="0.1 0.1 0.1">
+                <a-animation attribute="position"
+                    dur="10000"
+                    from="0 2 3"
+                    to="0 2 0"
+                    repeat="0"
+                    easing="linear"
+                ></a-animation>
+            </a-box>
+
+		</a-anchor>
+
+		<!-- Define a static camera -->
+		<a-camera-static/>
+
+	</a-scene>
+</body>
+<script src="js/jquery3.3.1.js"></script>
+<script src="js/demo.js"></script>
+</html>
