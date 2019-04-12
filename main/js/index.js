@@ -16,6 +16,10 @@ $('#assemble').click(function() {
   window.location.href='assemble.html';
 })
 
+$('#demo-animation').click(function(){
+  window.location.href='demo-animation.html'
+})
+
 $('.jump-button').click(function() {
   var modelID = $(this).attr('id');
  $('#submitModel').click(function() {
