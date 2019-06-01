@@ -3,7 +3,7 @@ body {
     overflow: hidden;
     font-family: monospace;
   }
-  
+
   .tip {
     position: fixed;
     top: 10px;
@@ -11,3 +11,8 @@ body {
     text-align: center;
     z-index: 1;
   }
+
+button {
+  padding: 10px;
+
+}
